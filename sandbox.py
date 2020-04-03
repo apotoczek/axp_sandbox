@@ -59,7 +59,7 @@ import uuid
 
 foo = []
 bar = []
-for i in range(0, 100000, 1):
+for i in range(0, 10, 1):
     foo.append(uuid.uuid4().hex)
     bar.append(uuid.uuid4().hex)
 
@@ -73,20 +73,20 @@ for i in range(0, 100000, 1):
 sfoo = set(foo)
 sbar = set(bar)
 
-print('sfoo: ' + str(sfoo))
-print('sbar: ' + str(sbar))
+# print('sfoo: ' + str(sfoo))
+# print('sbar: ' + str(sbar))
 
 delta_foo = sfoo.difference(sbar)
-if not delta_foo:
-    print('foo - no difference: ' + str(delta_foo))
-else:
-    print('foo - difference: bar missing ' + str(delta_foo))
+# if not delta_foo:
+#     print('foo - no difference: ' + str(delta_foo))
+# else:
+#     print('foo - difference: bar missing ' + str(delta_foo))
 
 delta_bar = sbar.difference(sfoo)
-if not delta_bar:
-    print('bar - no difference: ' + str(delta_bar))
-else:
-    print('bar - difference: foo missing ' + str(delta_bar))
+# if not delta_bar:
+#     print('bar - no difference: ' + str(delta_bar))
+# else:
+#     print('bar - difference: foo missing ' + str(delta_bar))
 
 length = 0
 if len(sfoo) > len(sbar):
