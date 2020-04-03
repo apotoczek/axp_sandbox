@@ -23,7 +23,7 @@ Args:
 
 `-d, --distinct` True or False, generate seed list of distinct or non-distinct ints
 
-Examples:
+#### Examples:
 
 ```
 $ python distinct.py -n 10 -d True
@@ -45,7 +45,7 @@ Distinct values found using algorithm and their count:
 
 > Note: script developed with Python 3.8.2 using virtualenv, but works in 2.7, 3.4, 3.6
 
-Implementation:
+#### Implementation:
 
 Script executes the seed generator `random_num(n, distinct)` and passes the seed list to the algorithm in `distinct_num(ran_list)`, which traverses the seed list and saves each distinct value to a new list, for comparison to the next loop iteration, until a duplicate is found or the whole list has been checked.  The new list length then represents the count of distinct values in the seed list, according to the algorithm defined in the requirements.  Once a duplicate is found, no further distinct ints are counted.
 
@@ -53,7 +53,7 @@ Script executes the seed generator `random_num(n, distinct)` and passes the seed
 
 > Can part a be done with O(1) auxiliary space (i.e. using only a constant amount of additional memory)? If so, write a function that does it. If not, why not?
 
-Answer:
+#### Answer:
 
 The algorithm takes a seed list of arbitrary length based on user input, so it cannot be assigned a Constant complexity.  It is O(n), Linear complexity based on the length of the seed list iterated through in a loop. 
 
