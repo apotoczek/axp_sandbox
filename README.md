@@ -62,12 +62,42 @@ The algorithm takes a seed list of arbitrary length based on user input, so it c
 
 #### Question:
 
-asdf
+> Write a program that reads in the names of two files from STDIN and outputs the number of strings they have in common to STDOUT. Each file contains 1 million strings of 32 characters, 1 per line.
 
 #### Part a:
 
-jkl
+Python script `compare.py` executable from CLI can generate two sample txt files of -n number 32 char strings, either distinct, or some strings in common -c.
+
+Args:
+
+**Generate sample files (foo.. and bar..):**
+
+`-n, --nstrings` Number of strings to generate in files, 1 <= n <= 1000000
+
+`-c, --common` Number of common strings between the generated files, 0 <= c <= 1000000 (if n == c the files will be identical)
+
+E.g.: `compare.py -n 10 -c 0` or `compare.py -n 10 -c 3`
+```
+$ python compare.py -n 10 -c 3
+Generating files with 10 strings, 3 in common:
+foo_1585939656.txt
+bar_1585939656.txt
+```
+
+**Process files and print number of strings in common:**
+
+Calling `compare.py` without arguments will prompt to enter the two filesnames for compare.  Function `compare(foo_name, bar_name)` creates a list of strings for each file, then compares the lists to calculate number of common strings.
+
+E.g.:
+```
+$ python compare.py
+File foo: foo_1585939656.txt
+File bar: bar_1585939656.txt
+Processing foo_1585939656.txt...
+Processing bar_1585939656.txt...
+There are 3 strings in common between the files
+```  
 
 #### Part b:
 
-foo
+The standard file processing and lists, as implemented in this solution, are not well suited for billions of strings.  Beyond a million, there are libraries that can be leveraged for better analysis and advanced data structures like numpy, pandas, and tools like jupiter notebooks.  Alternately, instead of reading the files and converting them to lists within the function, the data could be loaded into a database, which would be better suited for reading/writing large amounts of data.
