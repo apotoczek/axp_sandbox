@@ -1,6 +1,11 @@
-# Distinct Numbers
+# Assessment
 
-#### Question 1:
+1. [Distinct Numbers](#1-distinct-numbers)
+2. [Strings Comparison](#2-strings-comparison)
+
+## 1. Distinct Numbers
+
+#### Question:
 
 > The generator starts by returning the value at index 0. ​It then uses that value as the index for the next value to return, and so on​. If the generator was seeded with the list [1, 2, 0], the first number it would return would be 1, then 2, then 0, and then it would repeat the sequence. Thus, the number of distinct values would be 3."
 
@@ -51,3 +56,18 @@ Script executes the seed generator `random_num(n, distinct)` and passes the seed
 Answer:
 
 The algorithm takes a seed list of arbitrary length based on user input, so it cannot be assigned a Constant complexity.  It is O(n), Linear complexity based on the length of the seed list iterated through in a loop. 
+
+
+## 2. Strings Comparison
+
+#### Question:
+
+asdf
+
+#### Part a:
+
+jkl
+
+#### Part b:
+
+foo
